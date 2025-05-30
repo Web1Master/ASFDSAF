@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway:wght@200;300;400;500;600&display=swap');
+:root{
+  /* pallette */
+  --highlight: #f1f7ed;
+  --main: #243e36;
+  --sub-main: #7ca982;
+ /* fonts */ 
+  --play: 'Aboreto', cursive;
+  --mont: 'Raleway', sans-serif;
+/* font that will be used 
+font-family: 'Aboreto', cursive;
+font-family: 'Raleway', sans-serif;
+*/
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+
+.container{
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(7, 5, 5, 0.9),rgba(0, 189, 236, 0.2)), url(desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: relative;
+}
+.wrapper{
+  padding: 1rem;
+  color: white;
+}
+.wrapper .navigation{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-bottom: 2px solid salmon;
+  border-radius: 100px 690px;
+}
+.wrapper .navigation .logo a{
+  font-family: sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: white;
+  font-size: 23px;
+  margin-right: 2rem;
+}
+.navigation ul li{
+  display: inline;
+  padding: 6px 8px;
+}
+.navigation ul li:hover{
+  background-color: salmon;
+}
+.navigation ul li a{
+  font-family: var(--mont);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.4px;
+}
+.wrapper .content{
+  height: 580px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.wrapper .content h1{
+  margin-bottom: 0.8rem;
+  font-family:Arial, sans-serif;
+  font-size: 75px;
+  color: whitesmoke;
+  letter-spacing: 0.2px;
+}
+.wrapper .content p{
+  font-family: var(--mont);
+  font-size: 18x;
+  margin-bottom: 2rem;
+}
+.wrapper .content a{
+  font-size: 16px;
+  font-family:sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: salmon;
+  padding: 15px 20px;
+  background-color: rgb(0, 0, 0,0.7);
+  border: 2px solid salmon;
+  border-radius: 65px;
+}
+.wrapper .content a:hover{
+  color: rgba(1, 215, 243, 0.6);
+  border-bottom: 2px solid rgba(1, 215, 243, 0.6);
+}
+.internet{
+  background-color: white;
+  height: 645px;
+  padding: 1rem 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.internet h1, .biometric h1, .support h1{
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+.internet p, .biometric p, .support p{
+  font-family:var(--mont);
+  font-size: 12px;
+  font-style: italic;
+}
+.internet .wifi-access{
+  display: grid;
+  grid-template-columns: repeat(5,1FR);
+  margin-top: 1rem;
+  gap: 5px;
+  width: 90%;
+}
+.wifi-area h2{
+  font-size: 16px;
+  font-family: sans-serif;
+  color: white;
+  background-color: rgb(223, 116, 104);
+  padding: 10px;
+  border-bottom: 2px solid white;
+  text-transform: uppercase;
+}
+.wifi-area{
+  background: linear-gradient(to bottom, rgba(36, 161, 151, 0.3),rgba(2, 2, 2, 0.9)), url(wifi-black.avif);
+}
+.internet .wifi-list ul li{
+  list-style-type: none;
+  background-color: rgb(0, 0, 0,0.3);
+  padding: 7px 5px;
+  border-bottom: 0.4px solid rgb(228, 223, 223);
+}
+.internet .wifi-list ul li a{
+  text-decoration: none;
+  color: rgb(245, 240, 240);
+  font-size: 13px;
+  font-family: sans-serif;
+}
+.internet .wifi-list ul li:hover{
+  background-color: rgba(1, 215, 243, 0.2);
+}
+.biometric{
+    height: 645px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.4rem;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: white;
+    background-color: rgb(1, 30, 34);
+}
+.biometric .page-wrapper{
+  background: linear-gradient(to bottom, rgba(7, 5, 5, 1),rgba(2, 86, 107, 0.4)), url(biometric.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 2rem;
+  display: grid;
+  grid-template-areas:
+  	"item-1 content content"
+    "item-2 content content"
+    "item-3 content content"
+    "item-4 content content"
+    "item-5 content content"
+    "extract extract extract";
+  grid-template-columns: 1fr 5fr;
+  padding: 10px;
+}
+.page-wrapper .item-1{
+  grid-area: item-1;
+}
+.page-wrapper .item-2{
+  grid-area: item-2;
+}
+.page-wrapper .item-3{
+  grid-area: item-3;
+}
+.page-wrapper .item-4{
+  grid-area: item-4;
+}
+.page-wrapper .item-5{
+  grid-area: item-5;
+}
+.page-wrapper .content{
+  grid-area: content;
+  height: 420px;
+}
+.page-wrapper .extract{
+  grid-area: extract;
+}
+.biometric .page-wrapper > div{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(1, 215, 243,0.7);
+  border-radius: 3px;
+}
+.biometric .page-wrapper .item-link{
+  background-color: rgba(7, 1, 0, 0.4);
+}
+.biometric .page-wrapper .item-link:hover{
+  background: rgba(21, 228, 255, 0.3);
+}
+.biometric .page-wrapper a{
+  color: white;
+  font-family: sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+}
+.biometric .page-wrapper .extract{
+  background: linear-gradient(to left, rgba(250, 128, 114, 1), rgba(2, 2, 2,1), rgba(1, 215, 243,0.8));
+  border: none;
+}
+.biometric .page-wrapper .extract{
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+.biometric .page-wrapper .extract:hover{
+  background: linear-gradient(to right, rgba(250, 128, 114, 1), rgb(0, 0, 0,0.3), rgba(1, 215, 243,1));
+  border-bottom: 0.3px solid white;
+}
+.content table{
+  background-color: rgb(0,0,0,0.7);
+  font-family: sans-serif;
+  padding: 20px 30px;
+  text-align: left;
+}
+.content  th{
+  font-size: 15px;
+  color: rgb(247, 123, 123);
+  letter-spacing: 1px;
+  font-family: var(--mont);
+}
+.content th, td{
+    padding: 5px 13px;
+      border: 0.7px solid rgb(102, 83, 83);
+}
+.content td{
+  font-size: 13px;
+  text-align: left;
+  font-family: sans-serif;
+  color: rgba(255, 254, 253, 0.7);
+}
+.support{
+  background-color: white;
+  height: 645px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.support .section{
+  margin: 0px 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:7px;
+  height: 280px;  border-bottom: 2px solid salmon;
+}
+.support .section > div{
+  margin: 20px;
+  width: 100%;
+}
+.problem{
+  padding: 30px;
+}
+.problem h4{
+  font-family: sans-serif;
+  font-size: 30px;
+}
+.problem p{
+  font-family: sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  margin-bottom: 30px;
+  color: black;
+}
+.problem img{
+  width:280px;
+  border-radius: 60px;
+}
+.solution{
+  background-color: rgba(230, 223, 223, 0.7);
+  border-radius: 5px;
+}
